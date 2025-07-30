@@ -1,59 +1,30 @@
 console.log("Hey Nate, how's life ?")
 
 
-
-async function getSong(){
-
-
-    try{
-        const output = document.getElementById("output")
-        const response = await fetch("../data/nf-songs.json");
-        const songs = await response.json();
-
-        const index = Math.floor(Math.random() * songs.length)
-        const chanson = songs[index];
-
-        console.log(chanson)
-
-        // let albumcover =''
-        // switch(chanson.Album){
-        //     case "Hope":
-        //         albumcover = "https://m.media-amazon.com/images/I/81urqSumK4L._UF1000,1000_QL80_.jpg"
-        //         break;
-
-        //     default:
-        //         albumcover = "https://cdn-images.dzcdn.net/images/cover/f692f95997a917c2a94e7b9e3a27ccf3/1900x1900-000000-80-0-0.jpg";
-        //         break;
-        // }
+/* 
+Ce truc c'est pour 'réveiller' le serveur lorsqu'il se met en veille le coquinou
+*/
+document.addEventListener("DOMContentLoaded", () => { 
+  fetch("https://nf-api-c24p.onrender.com/")
+    .then(() => console.log("Render réveillé"))
+    .catch(err => console.warn("Render dort encore", err));
+});
 
 
-        const albumCovers = {
-        "Hope": "assets/cover/Hope.jpg",
-        "NF": "assets/cover/NF.jpg",
-        "Chasing": "assets/cover/Chasing.jpg",
-        "Mansion": "assets/cover/Mansion.jpg",
-        "No Name (EP)": "assets/cover/NoName.jpg",
-        "Clouds (The Mixtape)": "assets/cover/Clouds.jpg",
-        "Perception": "assets/cover/Perception.jpg",
-        "Therapy Session": "assets/cover/TherapySession.jpg",
-        "The Search": "assets/cover/TheSearch.jpg",
-        };
+async function getRandom() {
+    const response = await fetch("https://nf-api-c24p.onrender.com/api/musiques/random");
+    const randomMusic = await response.json();
 
-        const albumcover = albumCovers[chanson.Album] || "assets/notfound.jpg";
+    const output = document.getElementById("output")
+    console.log(randomMusic)
 
-        output.innerHTML = `
-        <h2>${chanson.Titre}</h2><p>Artiste: ${chanson.Artiste}
-        </p><p>Album: ${chanson.Album}</p>
-        <p>Durée: ${chanson.Durée}</p>
-        <p>Date de Sortie: ${chanson["Date de Sortie"]} </p>
-
-        <img src="${albumcover}">
-        `;
-
-
-    }
-    catch(error){
-        console.error("Erreur lors du chargement du fichier JSON: ", error)
-    }
+    output.innerHTML=
+    `
+    <h2> Title: ${randomMusic.titre} </h2>
+    <h3> Album: ${randomMusic.album} </h3>
+    <h3> <span> Release Date: <span> ${randomMusic.date_sortie} </h3>
+    <h3> <span> Duration: <span> ${randomMusic.duree} </h3>
+    <img src="https://nf-api-c24p.onrender.com/api/${randomMusic.cover_url}" alt="Album Cover">
+    `
 }
 
