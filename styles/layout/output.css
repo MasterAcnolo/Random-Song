@@ -1,0 +1,17 @@
+.output{
+
+    font-family: Poppins;
+}
+
+.output img{
+    transition: ease-in-out 0.2s;
+    width: 26rem;
+    height: auto;
+    margin-top: 3%;
+
+}
+
+.output img:hover{
+    transform: scale(1.05);
+    cursor:pointer;
+}

@@ -2,7 +2,6 @@
     font-family: 'Oswald', sans-serif; 
     font-size: 4rem;
     font-weight: 700;
-    text-transform: uppercase;
     color: #ffffff;
     letter-spacing: 2px;
     text-align: center;
@@ -12,14 +11,13 @@
 
     background: linear-gradient(to right, #ffffff 0%, #aaaaaa 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    /* Ombre dramatique */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .hero-title::after {
-    content: attr(data-text);
     position: absolute;
     left: 2px;
     top: 2px;
