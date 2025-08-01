@@ -28,5 +28,38 @@ async function getRandom() {
     `
 
     output.style.opacity = "1";
+    
+    const container = document.getElementById('output');
+
+    switch (randomMusic.album){
+        case "Hope":
+            container.style.backgroundColor = "#374542";
+            break;
+        case "The Search":
+            container.style.backgroundColor = "#292726";
+            break;
+        case "Perception":
+            container.style.backgroundColor = "#181E1E";
+            break;
+        case "Therapy Session":
+            container.style.backgroundColor = "#151716";
+            break;
+        case "Mansion":
+            container.style.backgroundColor = "#141615";  
+            break;
+        case "Clouds (The Mixtape)":
+            container.style.backgroundColor = "#435B69";
+            break;
+        case "Moments":
+            container.style.backgroundColor = "#1f1f1fff";
+            break;
+        case "NF (EP)":
+            container.style.backgroundColor = "#2A2F2B";
+            break;
+        default:
+            container.style.backgroundColor = "#302f2fff";
+    }
 }
+
+
 
