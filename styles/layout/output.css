@@ -1,17 +1,27 @@
-.output{
-
-    font-family: Poppins;
+.output {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 71, 62);
+    width: fit-content;
+    padding: 10px;
+    transition: ease-in-out 0.2s;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
+
 .output img{
-    transition: ease-in-out 0.2s;
     width: 26rem;
     height: auto;
     margin-top: 3%;
 
 }
 
-.output img:hover{
+/* .output img:hover{
     transform: scale(1.05);
     cursor:pointer;
-}
+} */

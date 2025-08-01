@@ -1,0 +1,32 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadePulse 1.5s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* .page {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+}
+
+.page.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+} */

@@ -24,7 +24,9 @@ async function getRandom() {
     <h3 id="album"> Album: ${randomMusic.album} </h3>
     <h3 id="date"> <span> Release Date: <span> ${randomMusic.date_sortie} </h3>
     <h3 id="duree"> <span> Duration: <span> ${randomMusic.duree} </h3>
-    <img src="https://nf-api-c24p.onrender.com/api/${randomMusic.cover_url}" alt="Album Cover">
+    <img src="https://nf-api-c24p.onrender.com/api/${randomMusic.cover_url}" alt="Cover of ${randomMusic.album}">
     `
+
+    output.style.opacity = "1";
 }
 
