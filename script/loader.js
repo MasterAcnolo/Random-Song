@@ -1,17 +1,8 @@
-const loader = document.getElementById("loader");
-const page = document.getElementById("page");
+ window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("fade-out");
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded");
-
-  // Fade out loader
-  loader.classList.add("fade-out");
-
-  // Fade in page
-  page.classList.add("fade-in");
-
-  // Cache le loader après animation
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 1000); // même durée que l'animation CSS
-});
+        setTimeout(() => {
+          loader.remove();
+        }, 800); 
+      });

@@ -1,32 +1,50 @@
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  background: white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadePulse 1.5s infinite ease-in-out;
-  transition: opacity 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease;
 }
 
-@keyframes fadePulse {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
-
-/* .page {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-align: center;
-}
-
-.page.visible {
-  opacity: 1;
-}
-
-.hidden {
+.loader.fade-out {
   opacity: 0;
   pointer-events: none;
-} */
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #444;
+  border-top: 6px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loader-text {
+  color: #ccc;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  animation: fadeInText 1.5s ease-in-out infinite alternate;
+}
+
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes fadeInText {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
