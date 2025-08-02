@@ -5,12 +5,17 @@
     justify-content: center;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(0, 71, 62);
+    background-color: #302f2fff;
     width: fit-content;
     padding: 10px;
     transition: ease-in-out 0.2s;
     margin: 20px auto;
     border-radius: 10px;
+    /* color: yellow; */
+    /* color: rgb(117, 117, 117); */
+    color: rgb(223, 223, 223);
+    font-weight:400;
+    font-size: 1.3rem;
     
 }
 
@@ -20,9 +25,15 @@
     height: auto;
     margin-top: 3%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 
 }
 
+span{
+    font-weight:500;
+    color: rgb(173, 173, 173);
+    /* color: white; */
+}
 /* .output img:hover{
     transform: scale(1.05);
     cursor:pointer;

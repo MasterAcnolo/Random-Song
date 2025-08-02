@@ -20,10 +20,10 @@ async function getRandom() {
 
     output.innerHTML=
     `
-    <h2 id="titre"> Title: ${randomMusic.titre} </h2>
-    <h3 id="album"> Album: ${randomMusic.album} </h3>
-    <h3 id="date"> <span> Release Date: <span> ${randomMusic.date_sortie} </h3>
-    <h3 id="duree"> <span> Duration: <span> ${randomMusic.duree} </h3>
+    <p id="titre"> <span> Title: </span> ${randomMusic.titre} </p>
+    <p id="album"> <span> Album: </span> ${randomMusic.album} </p>
+    <p id="date"> <span> Release Date: </span> ${randomMusic.date_sortie} </p>
+    <p id="duree"> <span> Duration: </span> ${randomMusic.duree} </p>
     <img src="https://nf-api-c24p.onrender.com/api/${randomMusic.cover_url}" alt="Cover of ${randomMusic.album}">
     `
 
