@@ -38,3 +38,15 @@ span{
     transform: scale(1.05);
     cursor:pointer;
 } */
+
+
+@media (max-width: 500px) {
+    .output{
+        font-size: 0.8rem;
+        margin-top: 100px;
+    }
+
+    .output img{
+        width: 20rem;
+    }
+}

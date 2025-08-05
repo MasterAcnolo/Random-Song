@@ -16,3 +16,9 @@
     transform: scale(1.2);
 }
 
+@media (max-width:500px) {
+    #random-button{
+        margin-top: 50px;
+        font-weight: 300;
+    }
+}
