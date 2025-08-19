@@ -29,6 +29,12 @@ async function getRandom() {
 
     output.style.opacity = "1";
     
+    // Animation trigger
+    output.classList.remove('animated');
+    void output.offsetWidth; // pour autoriser l'animation de se réinitialiser
+    output.classList.add('animated');
+
+
     const container = document.getElementById('output');
 
     switch (randomMusic.album){
