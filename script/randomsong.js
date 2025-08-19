@@ -60,6 +60,3 @@ async function getRandom() {
             container.style.backgroundColor = "#302f2fff";
     }
 }
-
-
-
